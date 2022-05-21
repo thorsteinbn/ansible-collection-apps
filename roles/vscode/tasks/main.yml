@@ -1,2 +1,13 @@
 ---
 # tasks file for vscode
+- name: "VSCODE: include needed tasks for detected OS"
+  ansible.builtin.include_tasks:
+    file: "{{ ansible_os_family }}.yml"
+
+- name: "VSCODE: Install extension(s)"
+  visual_studio_code_install_extension:
+    executable: "code"
+    name: "{{ item }}"
+  loop: "{{ vscode_addons }}"
+  when: ( vscode_addons is defined ) and ( vscode_addons is iterable )
+    

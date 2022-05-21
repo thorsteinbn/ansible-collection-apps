@@ -1,0 +1,23 @@
+- name: "REDHAT: Import gpg key"
+  become: true
+  ansible.builtin.rpm_key:
+    state: present
+    key: "{{ yum_repo_gpg_url }}"
+
+- name: "REDHAT: Add repository"
+  become: true
+  ansible.builtin.yum_repository:
+    name: "{{ yum_repo_name }}"
+    description: "{{ yum_repo_desc }}"
+    baseurl: "{{ yum_repo_url }}"
+    enabled: "{{ yum_repo_enabled }}"
+    gpgcheck: "{{ yum_repo_gpgcheck }}"
+    gpgkey: "{{ yum_repo_gpg_url }}"
+
+- name: "REDHAT: Install Code"
+  become: true
+  ansible.builtin.yum:
+    name: code
+    state: present
+    update_cache: true
+...
