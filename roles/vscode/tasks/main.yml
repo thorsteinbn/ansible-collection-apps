@@ -5,7 +5,7 @@
     file: "{{ ansible_os_family }}.yml"
 
 - name: "VSCODE: Install extension(s)"
-  visual_studio_code_install_extension:
+  thorsteinbn.apps.visual_studio_code_install_extension:
     executable: "code"
     name: "{{ item }}"
   loop: "{{ vscode_addons }}"
