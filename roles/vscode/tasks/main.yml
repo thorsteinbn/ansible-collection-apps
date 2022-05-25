@@ -10,4 +10,4 @@
     name: "{{ item }}"
   loop: "{{ vscode_addons }}"
   when: ( vscode_addons is defined ) and ( vscode_addons is iterable )
-    
+...
