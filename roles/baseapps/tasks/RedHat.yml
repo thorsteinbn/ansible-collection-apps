@@ -4,7 +4,7 @@
 
 - name: Install rpm packages
   become: true
-  ansible.buildin.yum:
+  ansible.builtin.yum:
     name: "{{ yum_packagelist | combine(extra_packages, list_merge='append') }}"
     state: present
     update_cache: true
