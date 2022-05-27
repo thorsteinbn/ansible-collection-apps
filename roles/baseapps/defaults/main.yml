@@ -1,0 +1,16 @@
+---
+# defaults file for baseapps
+common_packages:
+  - python3-pip
+  - podman
+
+yum_packages: []
+
+deb_packages: []
+
+pip_packaes:
+  - molecule
+  - molecule-podman
+
+# Use this variable to install extra packages in adition to the ones set above
+extra_packages: []
