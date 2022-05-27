@@ -1,10 +1,6 @@
-- name: "RedHat: Merge yum package lists"
-  ansible.builtin.set_fact:
-    yum_packagelist: "{{ yum_packages | combine(common_packages, list_merge='append') }}"
-
-- name: Install rpm packages
+- name: "REDHAT Install yum packages"
   become: true
   ansible.builtin.yum:
-    name: "{{ yum_packagelist | combine(extra_packages, list_merge='append') }}"
+    name: "{{ yum_packages }} + {{ extra_packages }} + {{ common_packages}}"
     state: present
     update_cache: true
