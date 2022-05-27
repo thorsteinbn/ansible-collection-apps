@@ -14,3 +14,5 @@ pip_packaes:
 
 # Use this variable to install extra packages in adition to the ones set above
 extra_packages: []
+
+extra_pip_packages: []
