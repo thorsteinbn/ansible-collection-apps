@@ -1,2 +1,5 @@
 ---
 # tasks file for baseapps
+- name: "BASEAPPS: include needed tasks for detected OS"
+  ansible.builtin.include_tasks:
+    file: "{{ ansible_os_family }}.yml"

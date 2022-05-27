@@ -3,6 +3,7 @@
     yum_packagelist: "{{ yum_packages | combine(common_packages, list_merge='append') }}"
 
 - name: Install rpm packages
+  become: true
   ansible.buildin.yum:
     name: "{{ yum_packagelist | combine(extra_packages, list_merge='append') }}"
     state: present
