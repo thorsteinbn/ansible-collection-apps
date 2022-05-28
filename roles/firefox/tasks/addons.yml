@@ -1,0 +1,5 @@
+---
+- name: "ADDONS: Ensure we have addon folder"
+  ansible.bulitin.file:
+    path: "~/.mozilla/extensions/{{ addon.id }}"
+...
