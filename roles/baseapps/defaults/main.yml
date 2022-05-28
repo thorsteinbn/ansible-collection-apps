@@ -4,7 +4,8 @@ common_packages:
   - python3-pip
   - podman
 
-yum_packages: []
+yum_packages:
+  - "@virtualization"
 
 deb_packages: []
 
