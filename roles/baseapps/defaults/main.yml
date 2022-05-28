@@ -7,6 +7,8 @@ common_packages:
 yum_packages:
   - "@virtualization"
 
+enable_rpmfusion: false
+
 deb_packages: []
 
 pip_packages:
