@@ -1,9 +1,7 @@
 ---
 # tasks file for firefox
 - name: "FIREFOX: Setup addons"
-  ansible.builtin.include_tasks:
-    file: addons.yml
+  ansible.builtin.get_url:
+    url: "{{ item.url }}"
+    dest: "~/.mozilla/extensions/{{ firefox_app_id }}/{{ item.id }}.xpi"
   loop: "{{ firefox_addons }}"
-  loop_conrol:
-    label: "{{ item.name }}"
-    loop_var: addon
