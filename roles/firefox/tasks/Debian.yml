@@ -1,8 +1,8 @@
 ---
-- name: "REDHAT: Install Firefox"
+- name: "DEBIAN: Install Firefox"
   become: true
   ansible.builtin.yum:
-    name: "{{ firefox_yum_package }}"
+    name: "{{ firefox_apt_package }}"
     state: present
     update_cache: true
 ...

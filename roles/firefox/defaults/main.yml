@@ -2,7 +2,12 @@
 # defaults file for firefox
 firefox_app_id: "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
 
-firefox_addons:
-  - name: bitwarden
-    url: https://addons.mozilla.org/firefox/downloads/file/3940986/bitwarden_password_manager-1.56.0.xpi
-    id: "{446900e4-71c2-419f-a6a7-df9c091e268b}"
+# firefox_addons:
+#   - name: bitwarden
+#     url: https://addons.mozilla.org/firefox/downloads/file/3940986/bitwarden_password_manager-1.56.0.xpi
+#     id: "{446900e4-71c2-419f-a6a7-df9c091e268b}"
+
+firefox_addons: []
+
+firefox_yum_package: firefox
+firefox_apt_package: firefox
