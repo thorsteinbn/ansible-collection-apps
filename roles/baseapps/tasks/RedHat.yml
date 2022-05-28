@@ -1,7 +1,7 @@
 ---
 - name: "REDHAT: Enable rpmfusion"
   become: true
-  ansible.bulitin.yum:
+  ansible.builtin.yum:
     name: "{{ item }}"
     state: present
   loop:
