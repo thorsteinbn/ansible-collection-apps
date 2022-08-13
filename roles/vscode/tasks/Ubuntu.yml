@@ -1,7 +1,7 @@
 ---
 - name: "UBUNTU: Install vscode"
   become: true
-  ansible.community.snap:
+  community.general.snap:
     name: "{{ vscode_snap_package }}"
     state: present
 ...
