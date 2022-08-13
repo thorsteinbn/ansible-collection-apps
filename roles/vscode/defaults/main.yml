@@ -7,6 +7,9 @@ yum_repo_enabled: true
 yum_repo_gpgcheck: true
 yum_repo_gpg_url: https://packages.microsoft.com/keys/microsoft.asc
 
+# Snap
+vscode_snap_package: vscode
+
 # vscode related variables
 vscode_addons: []
 ...

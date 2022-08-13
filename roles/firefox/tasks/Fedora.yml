@@ -1,5 +1,5 @@
 ---
-- name: "REDHAT: Install Firefox"
+- name: "FEDORA: Install Firefox"
   become: true
   ansible.builtin.yum:
     name: "{{ firefox_yum_package }}"

@@ -7,6 +7,10 @@ platforms:
   - name: fedora
     image: quay.io/fedora/fedora:37
     pre_build_image: true
+  - name: ubuntu
+    image: ubuntu:22.04
+    dockerfile: Dockerfiles/Ubuntu.j2
+    pre_build_image: false
 provisioner:
   name: ansible
 verifier:

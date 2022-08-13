@@ -2,7 +2,7 @@
 # tasks file for firefox
 - name: "FIREFOX: include needed tasks for detected OS"
   ansible.builtin.include_tasks:
-    file: "{{ ansible_os_family }}.yml"
+    file: "{{ ansible_distribution }}.yml"
 
 - name: "FIREFOX: Setup addons"
   ansible.builtin.get_url:

@@ -1,0 +1,7 @@
+---
+- name: "UBUNTU: Install Firefox"
+  become: true
+  ansible.community.snap:
+    name: "{{ firefox_snap_package }}"
+    state: present
+...

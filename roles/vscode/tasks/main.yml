@@ -2,7 +2,7 @@
 # tasks file for vscode
 - name: "VSCODE: include needed tasks for detected OS"
   ansible.builtin.include_tasks:
-    file: "{{ ansible_os_family }}.yml"
+    file: "{{ ansible_distribution }}.yml"
 
 - name: "VSCODE: Install extension(s)"
   thorsteinbn.apps.visual_studio_code_install_extension:

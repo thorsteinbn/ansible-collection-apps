@@ -1,8 +1,0 @@
----
-- name: "DEBIAN: Install Firefox"
-  become: true
-  ansible.builtin.apt:
-    name: "{{ firefox_apt_package }}"
-    state: present
-    update_cache: true
-...
