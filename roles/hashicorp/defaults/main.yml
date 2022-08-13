@@ -1,0 +1,20 @@
+---
+# defaults file for hashicorp
+hashicorp_packages:
+  - vagrant
+  - packer
+  - terraform
+
+# Apt related variables
+apt_repo_name: "hashicorp"
+apt_repo_url: "https://apt.releases.hashicorp.com {{ ansible_distribution_release }} main"
+apt_repo_gpg_url: https://apt.releases.hashicorp.com/gpg
+
+# Yum related variables
+yum_repo_name: "hashicorp"
+yum_repo_desc: "hashicorp"
+yum_repo_url: "https://rpm.releases.hashicorp.com/fedora/{{ ansible_distribution_version }}/x86_64/stable"
+yum_repo_enabled: true
+yum_repo_gpgcheck: true
+yum_repo_gpg_url: https://rpm.releases.hashicorp.com/gpg
+...

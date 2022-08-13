@@ -1,0 +1,10 @@
+---
+# tasks file for hashicorp
+- name: "HASHICORP: include needed tasks for detected OS"
+  ansible.builtin.include_tasks:
+    file: "{{ ansible_distribution }}.yml"
+
+- name: "HASHICORP: Install required packages"
+  ansible.builtin.package:
+    name: "{{ hashicorp_packages }}"
+    state: present

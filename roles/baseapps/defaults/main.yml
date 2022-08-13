@@ -17,6 +17,7 @@ deb_packages:
   - podman
   - buildah
   - virt-manager
+  - lsb-core
 
 pip_packages:
   - molecule
