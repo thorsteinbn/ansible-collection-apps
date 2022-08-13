@@ -7,6 +7,10 @@ platforms:
   - name: instance
     image: quay.io/centos/centos:stream8
     pre_build_image: true
+  - name: ubuntu
+    image: ubuntu:22.04
+    dockerfile: Dockerfiles/Ubuntu.j2
+    pre_build_image: false
 provisioner:
   name: ansible
 verifier:

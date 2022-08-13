@@ -6,10 +6,16 @@ common_packages:
 
 yum_packages:
   - "@virtualization"
+  - podman
+  - buildah
 
 enable_rpmfusion: false
 
-deb_packages: []
+deb_packages:
+  - qemu-kvm
+  - libvirt-daemon-system
+  - podman
+  - buildah
 
 pip_packages:
   - molecule
