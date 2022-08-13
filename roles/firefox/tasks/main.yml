@@ -9,4 +9,5 @@
     url: "{{ item.url }}"
     dest: "~/.mozilla/extensions/{{ firefox_app_id }}/{{ item.id }}.xpi"
   loop: "{{ firefox_addons }}"
+  when: ansible_distribution != "Ubuntu"
 ...
