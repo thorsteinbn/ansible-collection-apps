@@ -16,6 +16,7 @@ deb_packages:
   - libvirt-daemon-system
   - podman
   - buildah
+  - virt-manager
 
 pip_packages:
   - molecule

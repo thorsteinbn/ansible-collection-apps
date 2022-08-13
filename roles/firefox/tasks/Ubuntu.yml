@@ -1,7 +1,5 @@
 ---
-- name: "UBUNTU: Install Firefox"
-  become: true
-  community.general.snap:
-    name: "{{ firefox_snap_package }}"
-    state: present
+- name: "UBUNTU: Unsupported"
+  ansible.builtin.debug:
+    msg: "Currently UBUNTU is not supported"
 ...
