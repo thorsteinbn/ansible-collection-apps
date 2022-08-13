@@ -4,4 +4,5 @@
   community.general.snap:
     name: "{{ vscode_snap_package }}"
     state: present
+    classic: true
 ...
