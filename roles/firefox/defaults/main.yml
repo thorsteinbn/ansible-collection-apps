@@ -10,4 +10,4 @@ firefox_app_id: "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
 firefox_addons: []
 
 firefox_yum_package: firefox
-firefox_apt_package: firefox
+firefox_snap_package: firefox
