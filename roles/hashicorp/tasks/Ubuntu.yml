@@ -1,10 +1,12 @@
 ---
 - name: "UBUNTU: Add Hashicorp apt key"
+  become: true
   ansible.builtin.apt_key:
     url: "{{ apt_repo_gpg_url }}"
     state: present
 
 - name: "UBUNTU: Add Hashicorp apt repo"
+  become: true
   ansible.builtin.apt_repository:
     repo: "deb {{ apt_repo_url }}"
     state: present

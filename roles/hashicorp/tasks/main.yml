@@ -5,6 +5,8 @@
     file: "{{ ansible_distribution }}.yml"
 
 - name: "HASHICORP: Install required packages"
+  become: true
   ansible.builtin.package:
     name: "{{ hashicorp_packages }}"
     state: present
+...
