@@ -12,7 +12,7 @@ yum_packages:
 enable_rpmfusion: false
 
 deb_packages:
-  - qemu-system-x86
+#  - qemu-system-x86
   - libvirt-daemon-system
   - podman
   - buildah
